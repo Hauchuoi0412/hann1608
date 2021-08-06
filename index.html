@@ -55,6 +55,18 @@ else
 {
 }
 }
+
+$(document).ready(function () {
+$('#k').hide();
+$('h1').click(function() {
+                $('.active').removeClass('active');
+                $('#k').slideUp('fast');
+                if($(this).next('#k').is(':hidden') == true) {
+                $(this).addClass('active');
+                $(this).next('#k').slideDown('fast');
+                }
+            });
+ });
 </script>
 <script src="js/pace.min.js"></script>
   <link href="css/dataurl.css" rel="stylesheet" />
